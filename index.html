@@ -2,16 +2,36 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <script src="//at.alicdn.com/t/font_1214398_vw0f9d3lubc.js"></script>
         <title>画板</title>
     </head>
-    
     <body>
-        <canvas id="canvas" width=300height=300></canvas>
+    <canvas id=canvas width=300 height=300></canvas>
         <div  id=actions class="actions">
-          <button id="eraser">橡皮</button>
-          <button id="brush">画笔</button>
-        </div>  
+            <svg id=brush class="active icon" >
+                <use xlink:href="#icon-pen"></use>
+            </svg>
+            <svg id=eraser class="icon" >
+                <use xlink:href="#icon-eraser"></use>
+            </svg>
+            <svg id=clear class="icon" >
+                <use xlink:href="#icon-cleared"></use>
+            </svg>
+            <svg id=save class="icon" >
+                <use xlink:href="#icon-save"></use>
+            </svg>
+        </div>
+        <ol class="colors">
+            <li id=red class="red"></li>
+            <li id=green class="green"></li>
+            <li id=yellow class="yellow"></li>
+        </ol>  
+        <ol class="size">
+            <li id=thin></li>
+            <li id=thick></li>
+        </ol>
         <script src="./main.js"></script>
     </body>
 </html>
